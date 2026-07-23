@@ -1,6 +1,135 @@
-.navBar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 50px
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 16px 0;
+  transition: all 0.3s ease;
+}
+
+:global(.dark) .navBar {
+  background: rgba(15, 23, 42, 0.75);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Logo Section */
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logoRect {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.logoSection:hover .logoRect {
+  transform: scale(1.1);
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+:global(.dark) .logoText {
+  color: #f8fafc;
+}
+
+/* Navigation Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+:global(.dark) .navLink {
+  color: #94a3b8;
+}
+
+.navLink:hover {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+:global(.dark) .navLink:hover {
+  color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.12);
+}
+
+/* Buttons */
+.signInButton {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3b82f6;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  transition: all 0.2s ease;
+}
+
+.signInButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+}
+
+.userButton {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.userButton:hover {
+  color: #ffffff;
+  background-color: #ef4444;
+  border-color: #ef4444;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
 }

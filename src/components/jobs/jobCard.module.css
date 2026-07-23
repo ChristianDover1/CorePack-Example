@@ -1,0 +1,211 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.jobIdBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--border);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusCompleted {
+  color: var(--success);
+  background-color: var(--success-light);
+}
+
+.statusInProgress {
+  color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+.statusOverdue {
+  color: var(--danger);
+  background-color: var(--danger-light);
+}
+
+.jobName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.section {
+  border-top: 1px dashed var(--border);
+  padding: 1rem 0;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+}
+
+.customerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.companyName {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contactName {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progressValue {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 6px;
+  background-color: var(--border);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+  background-color: var(--accent);
+}
+
+.statusCompleted .progressBarFill {
+  background-color: var(--success);
+}
+
+.statusOverdue .progressBarFill {
+  background-color: var(--danger);
+}
+
+.itemCounts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.employeeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.employeeBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem 0.25rem 0.25rem;
+}
+
+.avatarCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: #ffffff;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.employeeName {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.noEmployees {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.dateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.dateLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dateValue {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.overdueDate {
+  color: var(--danger);
+}

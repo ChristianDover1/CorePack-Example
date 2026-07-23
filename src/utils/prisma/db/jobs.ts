@@ -94,3 +94,25 @@ export async function getJobWithNotes(jobId: number) {
       throw error;
   }
 }
+
+export async function getAllJobs() {
+  try {
+      const jobs = await prisma.job.findMany({
+          include: {
+              customer: true,
+              employeeJobs: {
+                  include: {
+                      employee: true
+                  }
+              }
+          },
+          orderBy: {
+              dateCreated: 'desc'
+          }
+      });
+      return jobs;
+  } catch (error) {
+      console.error('Error fetching all jobs:', error);
+      throw error;
+  }
+}
